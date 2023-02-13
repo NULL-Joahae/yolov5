@@ -13,7 +13,7 @@ cfg_model_path = "models/best.pt"
 
 cfg_enable_url_download = True
 if cfg_enable_url_download:
-    url = "https://archive.org/download/yoloTrained/yoloTrained.pt" #Configure this if you set cfg_enable_url_download to True
+    url = "https://archive.org/download/bestweight_nulljoaheae/best.pt" #Configure this if you set cfg_enable_url_download to True
     cfg_model_path = f"models/{url.split('/')[-1:][0]}" #config model path from url name
 ## END OF CFG
 
@@ -93,12 +93,10 @@ def main():
     imageInput(deviceoption, datasrc)
    
 
+if __name__ =='__main__':     
+    main()
 
-
-
-if __name__ =='__main__':
-                main()
-
+# Download Model from url
 @st.cache
 def loadModel():
       start_dl=time.time()
